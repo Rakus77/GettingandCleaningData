@@ -25,3 +25,18 @@ You should create one R script called run_analysis.R that does the following.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
+## Files in this Repository
+
+* `run_analysis.R` is the R script that performs the tasks laid out in the assignment shown above in the instructions.
+
+* `codebook.md` explains the variables used in the R script and describes the processes used to create them.
+
+* `README.md` details the purpose of the project as well as the instructions and files present in the Repository
+
+* `Tidy_Mean_Data.txt` is the file produced from the R script to complete the project requirements.
+
+
+## Running the Script
+
+When `run_analysis.R` is run, the data will be downloaded and unzipped to the current working directory into a created sub folder of the working directory named `GandCD`.  Operations will then be performed on the data as prescribed by the instructions and a text file containing the tidy data named `Tidy_Mean_Data.txt` will be produced to complete the tasks laid out for this project.  
+
