@@ -25,3 +25,14 @@ Running `run_analysis.R` will download the zip file to a created folder within y
 
 
 ### 1. Merge the training and the test sets to create one data set.  
+* `suball` combines the `subject_train` and the `subject_test` through `rbind()` producing a new data frame with 10299 rows and 1 column.
+* `y_all` combines the `y_train` and the `y_test` through `rbind()` producing a new data frame with 10299 rows and 1 column.
+* `x_all` combines the `x_train` and the `x_test` through `rbind()` producing a new data frame with 10299 rows and 561 columns.
+* `merged_data` combines the three new data frames `suball`, `y_all` and `x_all` through `cbind()` producing a new data frame, containing all the data we need, with 10299 rows and 563 columns.
+### 2. Extract only the measurements on the mean and standard deviation for each measurement. 
+* `mu_and_sigma` is created when we subset `merged_data` by selecting the columns `subjectID`, `activityID` and any column containing `mean` or `std` as part of its measurement.  This new data frame has 10299 rows and 88 columns.
+### 3. Use descriptive activity names to name the activities in the data set
+* This is achieved by replacing the numeric values in the `activityID` column with the names of the activities that correspond to those activity ID numbers. (e.g., an activity ID of 1 corresponds to 'Walking' in the `activity_labels` dataset.)
+### 4. Appropriately label the data set with descriptive variable names. 
+
+### 5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
